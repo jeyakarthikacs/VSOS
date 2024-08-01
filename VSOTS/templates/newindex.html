@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSOS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial, sans-serif', serif;
+            font-size: large;
+            background-color: black; /* Set background color */
+            background-image: url('https://tse4.mm.bing.net/th/id/OIP.13YkNno2dQ7qZOaiUwDargHaEK?rs=1&pid=ImgDetMain'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Text color changed to white for better contrast */
+        }
+
+        .upperblock {
+            width: 100vw;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            background-color: transparent; /* Make background of upperblock transparent */
+            font-family: 'Libre Baskerville', cursive;
+            font-size: large;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        .upperblock h1{
+          width: 80vw;
+          height: 10vh;
+          font-size: 100%;
+          align-items:center;
+          display:flex;
+        }
+        .image {
+            border-radius: 10%;
+            height: 100px; /* Reduce the height */
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Libre Baskerville', cursive;
+            display: flex;
+            justify-content: space-between;
+            font-size: large;
+        }
+       section {
+           display: none;
+           padding: 20px;
+           text-align: center;
+       }
+       footer {
+           display: none; /* Hide the footer */
+       }
+
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #heading1 {
+            font-size: 100%;
+            margin: 0;
+        }
+
+        #heading {
+            font-size: 400%;
+            margin: 0%;
+            text-align: center;
+        }
+
+        .containerleft {
+            font-family: 'Arial, sans-serif';
+            font-size: large;
+            padding-top: 5%;
+        }
+
+
+        .buttonclass {
+            padding-top: 1%;
+        }
+
+        .button {
+            border: none;
+            border-style: solid;
+            width: 300px;
+            height: 50px;
+            font-family: 'Libre Baskerville', cursive;
+            font-size: large;
+        }
+
+        .button:hover {
+            background-color:  #010101;
+            color: white;
+            cursor:pointer;
+        }
+      .ba{
+        text-align:left;
+      }
+      
+
+    </style>
+</head>
+<body>
+    <div class="upperblock">
+      
+      
+        <h1>EAZY-FEAZY 🚌💨</h1>
+        <nav>
+            <a href="/" onclick="showSection('home')">Home </a>
+
+             <a href="#" onclick="showSection('about')">About </a>
+
+          <a href="/details">Route Details </a>
+
+           <a href="#" onclick="showSection('contact')"> Contact Us </a>
+             <a href="#" onclick="showSection('helpfulinfo')">Helpful information</a>
+
+        </nav>
+    </div>
+    <div class="container1">
+        <div class="containerleft">
+            <p id="heading"> Stay ahead of the crowd!!<br></p>
+            <marquee>
+            <p id="heading1">Check bus seat availability instantly - Using user-friendly interface 🚌💨 </p>
+            </marquee>
+        </div>
+        <div class="buttonclass">
+            <a href="{{url_for('dropdown')}}"><input type="button"  value="Seat Radar" class="button"></a>
+        </div>
+    </div>
+
+    <section id="about" style="overflow-y: auto; max-height: 200vh; padding: 50px;">
+        <u><h2>About Us</h2></u><br>
+
+
+
+          <h4 class="ba"><b></b></h4>
+          <ul class="ba">
+            <li>The core functionality of this system lies in its ability to track vehicle movements in real-time.</li>
+            <li>This system enhance the optimization of transport facilities.</li>
+            <li>Utilize Image processing techniques to monitor seat availability in vehicles.</li>
+          </ul>
+          <br>
+
+              <h4 class="ba"><b>TRANSLATION</b>:</h4><br>
+      <ul class="ba">
+       
+         <li>இந்த அமைப்பின் முக்கிய செயல்பாடு வாகனங்களின் இயக்கங்களை நிகழ்நேரத்தில் கண்காணிக்கும் திறனில் உள்ளது.</li>
+         <li>இந்த அமைப்பு போக்குவரத்து வசதிகளை மேம்படுத்துகிறது.</li>
+        <li>வாகனங்களில் இருக்கை கிடைப்பதை கண்காணிக்க பட செயலாக்க நுட்பங்களைப் பயன்படுத்தவும்.</li>
+      </ul>
+          </section>
+  <section id="contact" style="overflow-y: auto; max-height: 200vh; padding: 100px;">
+       <img src="static/irp.png" alt="Logo" style="width: 110px; height: 110px; margin-right: 40px;">
+       <img src="static/klnce logo ai.png" alt="Logo" style="width: 80px; height: 100px; margin-right: 60px;">
+      <h2>Contact Us</h2><br>
+      <p>DESIGN AND DEVELOPED BY KLN INNOVATION & RESEARCH PARK<br>KLN COLLEGE OF ENGINEERING</p><br><strong>STUDENTS:</strong><br><br>
+    <ul style="list-style-type:none;">
+      <li>RAMACHANDRAN M</li>
+      <li>HARIPRIYA K</li>
+      <li>AKSHAYA T H</li>
+      <li>JEYAKARTHIKA C S</li>
+      <li>HARINI S S</li>
+    </ul><br>
+    <hr>
+      
+    <hr><br>
+      <b><u><p>CONTACT INFORMATION</p></u></b><br>PHONE NUMBER: +91 9443402901<br>MAIL-ID: irp@klnce.edu<br></p><br>
+    <strong><u>FACULTY  MENTORS</u></strong><br><br>
+    <ul style="list-style-type:none;">
+      <li>Dr PARTHASARATHY S ( PROF/EEE )</li>
+      <li>Dr KARTHICK R ( ASP/CSE )</li>
+     
+    </ul><br>
+  </section>
+
+          <section id="helpfulinfo" style="overflow-y: auto; max-height: 200vh; padding: 150px;">
+              <u><h2>Helpful Information</h2></u>
+              <br>
+              <p><b>Plan Your Route:</b> Before you travel, familiarize yourself with the bus routes, schedules, and stops in your area. Most cities have online resources or mobile apps where you can access this information.<br></p>
+            <p><b>Check for Updates:</b> Check for any updates or changes to bus schedules or routes, especially during holidays or adverse weather conditions.<br></p>
+            <p><b>Keep Track of Your Belongings:</b> Keep your belongings secure and within sight while on the bus. Be mindful of pickpockets in crowded areas.<br></p>
+            <p><b>Have Exact Fare or Pass:</b> Make sure you have the exact fare ready or a valid bus pass to avoid delays when boarding.<br></p>
+            <p><b>Safety and Security:</b> Passengers need to feel safe and secure while traveling on buses. This includes well-lit bus stops, security cameras on buses, and the presence of transit personnel or law enforcement officers to address safety concerns.<br>
+              </p>
+          </section>
+
+
+  <script>
+      // JavaScript function to show the selected section and hide others
+      function showSection(sectionId) {
+          // Hide all sections
+          var sections = document.querySelectorAll('section');
+          sections.forEach(function(section) {
+              section.style.display = 'none';
+          });
+
+          // Show the selected section
+          var selectedSection = document.getElementById(sectionId);
+          selectedSection.style.display = 'block';
+
+          // Hide the "Welcome to..." block if it's not the home section
+          if (sectionId !== 'home') {
+              document.querySelector('.container1').style.display = 'none';
+          } else {
+              document.querySelector('.container1').style.display = 'flex';
+          }
+      }
+  </script>
+</body>
+</html>

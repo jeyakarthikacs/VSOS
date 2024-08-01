@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.wallpapersafari.com/66/87/YWhEzr.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "poppins", sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url("https://tse4.mm.bing.net/th/id/OIP.13YkNno2dQ7qZOaiUwDargHaEK?rs=1&pid=ImgDetMain") no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+        
+
+        .box {
+            width: 400px;
+            height: auto;
+            border: 2px solid #010101; /* Changed border color to match the theme */
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            background: rgba(252, 186, 203, 0.3); /* Changed background color to match the theme */
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative; /* Added to position the back link */
+        }
+        .girl-img {
+            position: absolute; /* Position the girl image */
+            top:222px;
+            bottom:50px;
+            left:658px;/* Adjust bottom position as needed */
+            right: 400px; /* Adjust right position as needed */
+            width: 200px; /* Adjust width as needed */
+            
+        }
+        .boy-img {
+            position: absolute; /* Position the girl image */
+          
+            bottom:30px;
+            left:10px;/* Adjust bottom position as needed */
+            right: 600px; /* Adjust right position as needed */
+            width:300px; /* Adjust width as needed */
+
+        }
+        .road-img {
+            position: absolute; /* Position the girl image */
+
+            bottom:-50px;
+            left:2px;/* Adjust bottom position as needed */
+            right: 600px; /* Adjust right position as needed */
+            width:300px; /* Adjust width as needed */
+
+        }
+        .road1-img {
+            position: absolute; /* Position the girl image */
+
+            bottom:-50px;
+            left:1250px;/* Adjust bottom position as needed */
+            right:10px; /* Adjust right position as needed */
+            width:300px; /* Adjust width as needed */
+
+        }
+        .road2-img {
+            position: absolute; /* Position the girl image */
+
+            bottom:-50px;
+            left:1000px;/* Adjust bottom position as needed */
+            right: 80px; /* Adjust right position as needed */
+            width:300px; /* Adjust width as needed */
+
+        }
+        .road3-img {
+            position: absolute; /* Position the girl image */
+
+            bottom:-50px;
+            left:750px;/* Adjust bottom position as needed */
+            right: 180px; /* Adjust right position as needed */
+            width:300px; /* Adjust width as needed */
+
+        }
+        .road4-img {
+            position: absolute; /* Position the girl image */
+
+            bottom:-50px;
+            left:500px;/* Adjust bottom position as needed */
+            right: 500px; /* Adjust right position as needed */
+            width:300px; /* Adjust width as needed */
+
+        }
+        .road5-img {
+            position: absolute; /* Position the girl image */
+
+            bottom:-50px;
+            left:250px;/* Adjust bottom position as needed */
+            right: 100px; /* Adjust right position as needed */
+            width:300px; /* Adjust width as needed */
+
+        }
+        .bus-img {
+            position: absolute; /* Position the girl image */
+
+            bottom:30px;
+            left:1200px;/* Adjust bottom position as needed */
+            right: 10px; /* Adjust right position as needed */
+            width:300px; /* Adjust width as needed */
+
+        }
+        .bus1-img {
+            position: absolute; /* Position the girl image */
+
+            bottom:30px;
+            left:700px;/* Adjust bottom position as needed */
+            right: 10px; /* Adjust right position as needed */
+            width:500px; /* Adjust width as needed */
+
+        }
+
+
+        h2 {
+            font-size: 1.5em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .bus-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .bus-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #010101; /* Changed color for better visibility */
+            margin-bottom: 10px;
+        }
+
+        .bus-details {
+            margin-bottom: 10px;
+            color: #333; /* Changed color for better visibility */
+        }
+
+        .bus-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bus-button {
+            background-color: transparent; /* Set button background to transparent */
+            border: 2px solid #fff; /* Add border */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .bus-button:hover {
+            background-color: #333; /* Change background color on hover */
+        }
+
+        a.back-link {
+            color: #fff;
+            text-decoration: none;
+            margin-top: 20px;
+            align-self: center; /* Center align the back link */
+            position: absolute; /* Position the back link */
+            bottom: -30px; /* Adjust position */
+        }
+
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+
+        #colourbox {
+            width: 200px;
+            height: 20px; /* Adjusted height */
+            margin-bottom: 20px; 
+            background-color: green;
+          } 
+        }
+
+        #colourbox span {
+            font-weight: bold;
+            color: #000; /* Changed color to black */
+        }
+    </style>
+    <script type="text/javascript">
+        function autoRefresh() {
+            window.location = window.location.href;
+        }
+        setInterval('autoRefresh()', 2000);
+        function chgColor() {
+        var udata = {{ data }};
+        if (udata == 0) {
+                colourbox.style.background = '#808080';  // Change to hexadecimal format
+                document.getElementById("h3").innerHTML = "Bus not Started";
+            }
+            else if (udata >= 40) {
+                colourbox.style.background = '#00FF00';
+                document.getElementById("h3").innerHTML = udata + " Seats available";
+            }
+            else if (udata >= 20 && udata < 40) {
+                colourbox.style.background = '#FFA500';
+                document.getElementById("h3").innerHTML = "Available place in Standing";
+            }  
+            else {
+                colourbox.style.background = '#FF0000';
+                document.getElementById("h3").innerHTML = "Sorry! No Space available";
+            } 
+        } 
+        chgColor(); // Call the function when the page loads
+    </script>
+
+</head>
+<body>
+   <img class="girl-img" src="https://cdn.pixabay.com/photo/2020/11/20/15/30/a-boy-peeking-out-from-behind-the-wall-5761932_1280.png" alt="Girl ">
+
+   <img class="boy-img" src="https://cdni.iconscout.com/illustration/premium/thumb/people-on-bus-station-4705729-3944410.png" alt="Boy ">
+
+  <img class="bus-img" src="https://static.vecteezy.com/system/resources/previews/009/381/340/original/bus-clipart-design-illustration-free-png.png" alt="Busstop ">
+
+   <img class="bus1-img" src="https://th.bing.com/th/id/R.ca50c5e37fa8c40ded0ba6dfdd0a248c?rik=VhJdknhTbCxTaA&riu=http%3a%2f%2fclipart-library.com%2fimage_gallery%2fn1285750.png&ehk=7v2FIFU71LbksWCHijr0t9hMceiq6diCQqmE7Yz%2fTeA%3d&risl=&pid=ImgRaw&r=0" alt="Busstop ">
+
+   <img class="road-img" src="https://static.vecteezy.com/system/resources/previews/013/079/896/original/straight-road-travel-concept-illustration-png.png" alt="Road ">
+
+  <img class="road1-img" src="https://static.vecteezy.com/system/resources/previews/013/079/896/original/straight-road-travel-concept-illustration-png.png" alt="Road1 ">
+
+  <img class="road2-img" src="https://static.vecteezy.com/system/resources/previews/013/079/896/original/straight-road-travel-concept-illustration-png.png" alt="Road2 ">
+
+  <img class="road3-img" src="https://static.vecteezy.com/system/resources/previews/013/079/896/original/straight-road-travel-concept-illustration-png.png" alt="Road3 ">
+
+   <img class="road4-img" src="https://static.vecteezy.com/system/resources/previews/013/079/896/original/straight-road-travel-concept-illustration-png.png" alt="Road4">
+
+   <img class="road5-img" src="https://static.vecteezy.com/system/resources/previews/013/079/896/original/straight-road-travel-concept-illustration-png.png" alt="Road5">
+
+
+  
+    <div class="box">
+        <h2> Available Seats : <span id="availableSeats">{{data}}</span></h2>
+        <div id="colourbox"></div>
+        <h3 id="h3"></h3>
+        <br>
+        <br>
+        <a href="/dropdown" class="back-link">Back to Route Finder</a>
+    </div> 
+
+</body> 
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Details</title>
+    <style>
+        body {
+            background-image: url('https://tse4.mm.bing.net/th/id/OIP.13YkNno2dQ7qZOaiUwDargHaEK?rs=1&pid=ImgDetMain'); /* Add your background image URL here */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 50%;
+            margin: auto;
+            border:1px solid black;
+            border-collapse:collapse;
+            background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent white background to the table */
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid black;
+            border-style:outset;
+            
+        }
+
+        th {
+            background-color:#281E5D;
+            color:#fff;
+        }
+
+        h1, h2 {
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <u><h1>KLNCE Buses</h1></u>
+    </center>
+    <h2>Forenoon Buses</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Bus Number</th>
+                <th>Source</th>
+                <th>Destination</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bus in buses_am %}
+            <tr>
+                <td>{{ bus.bus_number }}</td>
+                <td>{{ bus.source }}</td>
+                <td>{{ bus.destination }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Afternoon Buses</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Bus Number</th>
+                <th>Source</th>
+                <th>Destination</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bus in buses_pm %}
+            <tr>
+                <td>{{ bus.bus_number }}</td>
+                <td>{{ bus.source }}</td>
+                <td>{{ bus.destination }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

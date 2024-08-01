@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+
+    font-family: "poppins", sans-serif;
+}
+
+body{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://tse4.mm.bing.net/th/id/OIP.13YkNno2dQ7qZOaiUwDargHaEK?rs=1&pid=ImgDetMain") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.box {
+    width: 400px;
+    height: auto;
+    border: 2px solid #625d5d;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: transparent;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center align items horizontally */
+}
+
+      .girl-img {
+          position: absolute; /* Position the girl image */
+          bottom: -10px; /* Adjust bottom position as needed */
+          right: 400px; /* Adjust right position as needed */
+          width: 150px; /* Adjust width as needed */
+          animation: girlAnimation 5s infinite alternate; /* Apply animation */
+      }
+
+      @keyframes girlAnimation {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(-10px); }
+      }
+
+h2 {
+    font-size: 1.5em; /* Reduce font size for better alignment */
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin for spacing below the heading */
+}
+
+.box form {
+    width: 100%;
+    color: #fff;/* Make the form full width */
+}
+
+.inputbox {
+    margin-bottom: 20px;
+    width: 100%; /* Make input boxes full width */
+}
+
+.inputbox label {
+    font-size: 1em;
+    margin-bottom: 5px; /* Add some bottom margin for spacing */
+}
+
+input:focus ~ label{
+    top: -5px;
+    color: #fff;
+}
+
+input:focus ~ label{
+    top: -5px;
+    color: #fff;
+}
+
+      .inputbox input{
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        padding: 0 35px 0 5px;
+        color: #fff;
+      }
+      .inputbox ion-icon{
+        position: absolute;
+        right: 8px;
+        color: #fff;
+        font-size: 1.2em;
+        top: 20px;
+      }
+
+
+      input[type="text"],
+      select, button {
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+    padding: 0 10px;
+    color: #fff;
+    margin-top: 5px;
+}
+     
+
+button {
+    margin-top: 20px;
+  color: #fff;/* Add top margin for spacing */
+}
+
+button:hover {
+    background-color: #716262; /* Adjust hover background color */
+}
+
+
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;  
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 600ms, border-color 600ms;
+  z-index: 10000;
+}
+
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link > i, .meta-link > span {
+  height: 20px;
+  line-height: 20px;
+}
+
+.meta-link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  transition: color 600ms;
+}
+
+    </style>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+</head>
+<body>
+
+    <div class="box">
+
+            <h2>Route Finder </h2>
+            <img class="girl-img" src="https://cdni.iconscout.com/illustration/premium/thumb/confused-kid-asking-questions-6742705-5664597.png" alt="Girl Standing">
+            <form action="/search" method="POST">
+                <label for="source">Source:</label>
+                <select name="source" id="source">
+                    <option value="munichalai">munichalai</option>
+                    <option value="sandhapettai">sandhapettai</option>
+                    <option value="alankar theatre">alankar theatre</option>
+                    <option value="kp colony">kp colony</option>
+                    <option value="mg nagar">mg nagar</option>
+                    <option value="bb kulam">bb kulam</option>
+                    <option value="kp kovil">kp kovil</option>
+                    <option value="klnce">klnce</option>
+                    <option value="thirunagar 8,7,6,5,4,3,2,1">thirunagar 8,7,6,5,4,3,2,1</option>
+                    <option value="harveypatti">harveypatti</option>
+                    <option value="tpk amman kovil">tpk amman kovil</option>
+                    <option value="tpk poonga">tpk poonga</option>
+                    <option value="tpk police station">tpk police station</option>
+                    <option value="moolakarai">moolakarai</option>
+                    <option value="pasumalai">pasumalai</option>
+                    <option value="pykara">pykara</option>
+                    <option value="alagappan nagar">alagappan nagar</option>
+                    <option value="palanganatham">palanganatham</option>
+                    <option value="vasantha nagar">vasantha nagar</option>
+                    <option value="aandal puram">aandal puram</option>
+                    <option value="majura college">majura college</option>
+                    <option value="chappani kovil">chappani kovil</option>
+                     <option value="alagappan nagar">alagappan nagar</option>
+                    <option value="TVS poonga">TVS poonga</option>
+                    <option value="TVS nursery school">TVS nursery school</option>
+                    <option value="jeeva nagar">jeeva nagar</option>
+                    <option value="therkuvasal">therkuvasal</option>
+                    <option value="thavitusanthai">thavitusanthai</option>
+                    <option value="kochadai">kochadai</option>
+                    <option value="mudakusalai">mudakusalai</option>
+                    <option value="PP saavadi">PP saavadi</option>
+                    <option value="kalavasal(big bazaar)">kalavasal(big bazaar)</option>
+                    <option value="periyar">periyar</option><!-- Your source options here -->
+                </select>
+                <br>
+
+                <label for="destination">Destination:</label>
+                <select name="destination" id="destination">
+                    <option value="munichalai">munichalai</option>
+                    <option value="sandhapettai">sandhapettai</option>
+                    <option value="alankar theatre">alankar theatre</option>
+                    <option value="kp colony">kp colony</option>
+                    <option value="mg nagar">mg nagar</option>
+                    <option value="bb kulam">bb kulam</option>
+                    <option value="kp kovil">kp kovil</option>
+                    <option value="klnce">klnce</option>
+                    <option value="thirunagar 8,7,6,5,4,3,2,1">thirunagar 8,7,6,5,4,3,2,1</option>
+                    <option value="harveypatti">harveypatti</option>
+                    <option value="tpk amman kovil">tpk amman kovil</option>
+                    <option value="tpk poonga">tpk poonga</option>
+                    <option value="tpk police station">tpk police station</option>
+                    <option value="moolakarai">moolakarai</option>
+                    <option value="pasumalai">pasumalai</option>
+                    <option value="pykara">pykara</option>
+                    <option value="alagappan nagar">alagappan nagar</option>
+                    <option value="palanganatham">palanganatham</option>
+                    <option value="vasantha nagar">vasantha nagar</option>
+                    <option value="aandal puram">aandal puram</option>
+                    <option value="majura college">majura college</option>
+                    <option value="chappani kovil">chappani kovil</option>
+                     <option value="alagappan nagar">alagappan nagar</option>
+                    <option value="TVS poonga">TVS poonga</option>
+                    <option value="TVS nursery school">TVS nursery school</option>
+                    <option value="jeeva nagar">jeeva nagar</option>
+                    <option value="therkuvasal">therkuvasal</option>
+                    <option value="thavitusanthai">thavitusanthai</option>
+                    <option value="kochadai">kochadai</option>
+                    <option value="mudakusalai">mudakusalai</option>
+                    <option value="PP saavadi">PP saavadi</option>
+                    <option value="kalavasal(big bazaar)">kalavasal(big bazaar)</option>
+                    <option value="periyar">periyar</option><!-- Your destination options here -->
+                </select>
+                <br>
+
+                <label for="schedule">Schedule:</label>
+                <select name="schedule" id="schedule">
+                    <option value="AM">FORENOON</option>
+                    <option value="PM">AFTERNOON</option>
+                </select>
+                <br>
+                <div class="bus-buttons">
+                    <button class="bus-button">Search Buses</button>
+                </div>
+
+
+
+        </form>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "poppins", sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url("https://tse4.mm.bing.net/th/id/OIP.13YkNno2dQ7qZOaiUwDargHaEK?rs=1&pid=ImgDetMain") no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+
+        .box {
+            width: 400px;
+            height: auto;
+            border: 2px solid #010101; /* Changed border color to match the theme */
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            background: rgba(252, 186, 203, 0.3); /* Changed background color to match the theme */
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative; /* Added to position the back link */
+        }
+        .image {
+            border-radius: 10%;
+            height: 100px; /* Reduce the height */
+            margin-right: 10px;
+        }
+       @keyframes girlAnimation {
+           0% { transform: translateY(0); }
+           100% { transform: translateY(10px); }
+       }
+
+
+
+        h2 {
+            font-size: 1.5em;
+            color: #000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .bus-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .bus-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000; /* Changed color for better visibility */
+            margin-bottom: 10px;
+        }
+
+        .bus-details {
+            margin-bottom: 10px;
+            color: #000; /* Changed color for better visibility */
+        }
+
+        .bus-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bus-button {
+            background-color: transparent; /* Set button background to transparent */
+            border: 2px solid #fff; /* Add border */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .bus-button:hover {
+            background-color: #333; /* Change background color on hover */
+        }
+
+        a.back-link {
+            color: #fff;
+            text-decoration: none;
+            margin-top: 20px;
+            align-self: center; /* Center align the back link */
+            position: absolute; /* Position the back link */
+            bottom: -30px; /* Adjust position */
+        }
+
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+       <img class="girl-img" src="https://3.bp.blogspot.com/-Tw1eIvMeR_c/Xij4VTSiCOI/AAAAAAAM0p0/kjd8qvYA3REkkNRd5KLfQPfLrHSrdlL7wCLcBGAsYHQ/s1600/AS0006294_04.gif" alt="Girl ">
+        <!-- Content here -->
+        <h2>Bus Route Details</h2>
+        <div class="bus-container">
+            {% if buses %}
+            {% for bus in buses %}
+            <div class="bus-box">
+                <div class="bus-name">{{ bus.bus_number }}</div>
+                <div class="bus-details">Source: {{ bus.source }}<br>Destination: {{ bus.destination }}</div>
+                <div class="bus-buttons">
+                    <button onclick="window.location='/display'" class="bus-button status-button" data-bus="{{ bus.bus_number }}">Seats</button>
+                    <button onclick="window.location='https://maps.app.goo.gl/Zg2GzZJxSnQyvEiT7'" class="bus-button">Route Direction</button>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No buses found for the selected source and destination.</p>
+            {% endif %}
+        </div>
+        <a href="/dropdown" class="back-link">Back to Route Finder</a>
+    </div>
+</body>
+</html>
