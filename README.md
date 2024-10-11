@@ -2,14 +2,12 @@
 This repository contains the code for the Vehicle Seat Occupancy and Tracking System. The system helps track the exact location of a bus and provides real-time seat availability data, enhancing the public transportation experience by informing passengers about available seats before they board.
 
 ## Table of Contents
-Introduction
-Features
-Technologies Used
-Hardware Requirements
-Setup Instructions
-Usage
-Design Patterns
-Output
+- Introduction
+- Features
+- Technologies Used
+- Hardware Requirements
+- Setup Instructions
+  
 ### Introduction
 This project addresses the challenge of uncertain seat availability in public transport. It provides real-time updates on seat occupancy and tracks the bus's location. By using a Raspberry Pi to control a camera module, the system monitors the available seats and sends updates to a web-based frontend built with HTML, CSS, and JavaScript.
 
@@ -36,7 +34,27 @@ Internet connection
 ### Setup Instructions
 1. Clone the Repository:
 
-```sh
-git clone https://github.com/your-username/vehicle-seat-tracking-system.git
-cd vehicle-seat-tracking-system
+   ```sh
+   git clone https://github.com/your-username/vehicle-seat-tracking-system.git
+   cd vehicle-seat-tracking-system
+
+2. Install Backend Dependencies: Ensure Python and pip are installed on your Raspberry Pi or system:
+
+   ```sh
+   pip install -r requirements.txt
+
+3. Configure Raspberry Pi:
+
+   Set up Raspberry Pi OS.
+   Attach the camera module to the Raspberry Pi.
+
+
+4. Run the Backend: Start the backend to begin monitoring seats:
+
+   ```sh
+   python app.py
+   
+5. Run the Frontend: Open index.html in a browser to view seat availability and bus location in real time.
+
+
 
